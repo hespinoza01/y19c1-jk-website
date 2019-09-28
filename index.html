@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
+  <!-- head contiene la información de los metadatos acerca de la pagina y
+        y los enlaces a los scripts y hojas de estilos -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +10,11 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/src/favicon.png">
 </head>
+<!-- Cuerpo de la página, contiene toda la información que se mostrara al usuario -->
 <body>
 
   <main class="main">
+    <!-- En los header se suele encontrar el título, el logotipo, etc. -->
     <header class="header">
       <img src="./img/src/Code-FU.svg" alt="Code-FU logo" class="header-logo">
       <nav class="header-nav">
@@ -19,10 +23,13 @@
         <a href="#estudiantes" class="nav-item">Estudiantes</a>
       </nav>
     </header>
-
-    <section class="content">
-      <video id="portada" class="content--banner" src="./video/video-codefu.mp4" loop>Sin soporte de video</video>
-
+    <!-- engloba una sección de texto, imágenes y otros elementos  -->
+    <section id="portada" class="content">
+      <!-- nos permite añadir un video a nuestro html -->
+      <video class="content--banner" width="320" loop>
+        <source src="./video/video-codefu.mp4" type="video/mp4">
+        Sin soporte de video</video>
+      <!-- article nos sirve para dividir nuestra información dentro de un section -->
       <article class="content--title">
         <h1>Welcome, this is Y19C1-JK</h1>
         <img class="pacman" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pac_Man.svg/1200px-Pac_Man.svg.png" alt="">
@@ -31,6 +38,7 @@
       <article class="gallery-container" id="docentes">
         <h2 class="gallery-container--title section-title">Docentes</h2>
 
+        <!-- son una manera de dividir el contenido y aplicarle diferentes estilos -->
         <div class="gallery-container--content docentes">
           <div class="card">
             <img class="card-img" src="./img/docentes/hespinoza.jpg" alt="">
