@@ -112,16 +112,23 @@ a{
 .content--title h1{
   color: var(--text-secondary);
   font-size: 4rem;
+  cursor: default;
 }
 .content--title img{
   width: 3.25rem;
   height: 3.25rem;
   margin-left: 1rem;
+  transform: rotateY(0deg);
+  transition: transform .25s;
+}
+.content--title:hover img{
+  transform: rotateY(180deg);
 }
 
 /* ESTILOS PARA LAS SECCIONES DE LA GALERÍA */
 .section-title{
   text-align: center;
+  line-height: 3rem;
   color: var(--primary);
 }
 
@@ -132,6 +139,7 @@ a{
   background-color: var(--secondary);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+  margin-bottom: 2rem;
 }
 
 .gallery-container--content{
