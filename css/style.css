@@ -1,0 +1,194 @@
+:root{
+  --primary: #A51C30;
+  --secondary: #fff;
+  --primary-09: rgba(165, 28, 48, .9);
+  --primary-05: rgba(165, 28, 48, .5);
+
+  --text: #F56276;
+  --text-secondary: #fff;
+
+  --body-color: #f2f2f2;
+
+  --border-radius: 7px;
+  --border-radius-big: 14px;
+
+  --box-shadow: 0 0 7px 5px gainsboro;
+}
+
+/* ESTILOS BÁSICOS */
+html, body, *, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: var(--body-color);
+}
+
+img, video{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* ESTILOS PARA LA BARRA DE NAVEGACIÓN */
+.header{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  top: 0;
+  padding: .25rem 1rem;
+  width: 100%;
+  background-color: var(--primary-09);
+  z-index: 100;
+}
+
+.header-logo{
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  transform: scale(1);
+  transition: transform .3s;
+}
+.header-logo:hover{
+  transform: scale(1.15);
+}
+
+.header-nav{
+  text-align: center;
+}
+
+.nav-item{
+  display: inline-block;
+  color: var(--text);
+  line-height: 3rem;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  transform: scaleX(1);
+  transition-property: transform, color;
+  transition-duration: .25s;
+}
+.nav-item:hover{
+  transform: scaleX(1.1);
+  color: var(--text-secondary);
+}
+
+/* ESTILOS PARA LA PORTADA */
+.content{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.content--banner{
+  width: 100%;
+  padding-bottom: -50%;
+}
+
+
+/* ESTILOS PARA EL TÍTULO */
+.content--title{
+  width: fit-content;
+  margin: 0 auto;
+  background-color: var(--primary);
+  border-radius: var(--border-radius-big);
+  padding: 1rem 2.5rem;
+  transform: translateY(-50%);
+}
+
+.content--title h1, .content--title img{
+  display: inline-block;
+}
+
+.content--title h1{
+  color: var(--text-secondary);
+  font-size: 4rem;
+}
+.content--title img{
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-left: 1rem;
+}
+
+/* ESTILOS PARA LAS SECCIONES DE LA GALERÍA */
+.section-title{
+  text-align: center;
+  color: var(--primary);
+}
+
+.gallery-container{
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: var(--secondary);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.gallery-container--content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 15.45rem);
+  grid-template-rows: repeat(auto-fit, 25rem);
+  grid-auto-flow: row;
+  grid-auto-rows: 25rem;
+  grid-gap: 2rem;
+  align-items: stretch;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+.gallery-container--content.docentes{
+  grid-template-columns: repeat(3, 15.45rem);
+}
+
+/* ESTILOS PARA LAS TARJETAS */
+.card{
+  position: relative;
+  width: 15.45rem;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: var(--border-radius-big);
+  border: 1px solid gainsboro;
+}
+
+.card-img{
+  height: calc(100% - 4rem);
+  width: 100%;
+  object-fit: cover;
+}
+.card-name{
+  text-align: center;
+  line-height: 4rem;
+}
+.card-description{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem);
+  text-align: center;
+  background-color: var(--primary-05);
+  color: var(--secondary);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transform: translateY(-100%);
+  transition: transform .3s;
+}
+.card:hover .card-description{
+  transform: translateY(0);
+}
+
+/* ESTILOS UTILITARIOS */
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
